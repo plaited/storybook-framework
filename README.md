@@ -1,4 +1,4 @@
-[![build/tests](https://github.com/plaited/plaited/actions/workflows/test.yml/badge.svg?branch=main)](https://github.com/plaited/plaited/actions/workflows/test.yml)
+[![build/tests](https://github.com/plaited/storybook-framework/actions/workflows/test.yml/badge.svg?branch=main)](https://github.com/plaited/storybook-framework/actions/workflows/test.yml)
 
 # plaited
 
