@@ -1,14 +1,14 @@
 {
-  "name": "tests",
-  "private": true,
+  "name": "example",
   "version": "0.0.0",
+  "private": true,
   "type": "module",
   "scripts": {
-    "storybook": "storybook dev -p 6006 --ci",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "storybook": "storybook dev -p 6006 --ci"
   },
   "dependencies": {
-    "plaited": "5.0.1"
+    "plaited": "5.0.2"
   },
   "devDependencies": {
     "@storybook/addon-essentials": "7.5.2",

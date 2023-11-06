@@ -1,4 +1,4 @@
-import { Header } from './Header';
+import { Header } from './Header'
 
 export default {
   title: 'Example/Header',
@@ -14,7 +14,7 @@ export default {
     onLogout: { action: 'onLogout' },
     onCreateAccount: { action: 'onCreateAccount' },
   },
-};
+}
 
 export const LoggedIn = {
   args: {
@@ -22,6 +22,6 @@ export const LoggedIn = {
       name: 'Jane Doe',
     },
   },
-};
+}
 
-export const LoggedOut = {};
+export const LoggedOut = {}

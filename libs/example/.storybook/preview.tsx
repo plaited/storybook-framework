@@ -1,5 +1,5 @@
-import type { Preview } from "@plaited/storybook";
-import { createFragment } from "@plaited/storybook";
+import type { Preview } from '@plaited/storybook'
+import { createFragment } from '@plaited/storybook'
 
 const preview: Preview = {
   decorators: [
@@ -10,7 +10,7 @@ const preview: Preview = {
     },
   ],
   parameters: {
-    actions: { argTypesRegex: "^on[A-Z].*" },
+    actions: { argTypesRegex: '^on[A-Z].*' },
     controls: {
       matchers: {
         color: /(background|color)$/i,
@@ -18,6 +18,6 @@ const preview: Preview = {
       },
     },
   },
-};
+}
 
-export default preview;
+export default preview

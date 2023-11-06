@@ -1,14 +1,13 @@
-import { global } from '@storybook/global';
+import { global } from '@storybook/global'
 
-const { window: globalWindow } = global;
-
+const { window: globalWindow } = global
 
 declare global {
   interface Window {
-    STORYBOOK_ENV: 'plaited';
+    STORYBOOK_ENV: 'plaited'
   }
 }
 
 if (globalWindow) {
-  globalWindow.STORYBOOK_ENV = 'plaited';
+  globalWindow.STORYBOOK_ENV = 'plaited'
 }

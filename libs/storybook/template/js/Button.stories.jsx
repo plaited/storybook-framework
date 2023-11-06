@@ -1,5 +1,6 @@
-import { Button } from './button.js';
+import { Button } from './Button'
 
+// More on how to set up stories at: https://storybook.js.org/docs/preact/writing-stories/introduction
 export default {
   title: 'Example/Button',
   component: Button,
@@ -8,31 +9,32 @@ export default {
     backgroundColor: { control: 'color' },
     onClick: { action: 'onClick' },
   },
-};
+}
 
+// More on writing stories with args: https://storybook.js.org/docs/preact/writing-stories/args
 export const Primary = {
   args: {
     primary: true,
-    children: 'Button',
+    label: 'Button',
   },
-};
+}
 
 export const Secondary = {
   args: {
-    children: 'Button',
+    label: 'Button',
   },
-};
+}
 
 export const Large = {
   args: {
     size: 'large',
-    children: 'Button',
+    label: 'Button',
   },
-};
+}
 
 export const Small = {
   args: {
     size: 'small',
-    children: 'Button',
+    label: 'Button',
   },
-};
+}
