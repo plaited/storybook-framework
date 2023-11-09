@@ -1,3 +1,5 @@
-import { Button } from './button.js'
+import { Header } from './header/header.js'
+import { Page } from './page.js'
 
-customElements.define(Button.tag, Button)
+customElements.define(Header.tag, Header)
+customElements.define(Page.tag, Page)

@@ -32,9 +32,9 @@
     "build:watch": "bun run build --watch"
   },
   "dependencies": {
-    "@storybook/builder-vite": "7.5.2",
-    "@storybook/core-server": "7.5.2",
-    "@storybook/node-logger": "7.5.2",
+    "@storybook/builder-vite": "7.5.3",
+    "@storybook/core-server": "7.5.3",
+    "@storybook/node-logger": "7.5.3",
     "@plaited/storybook": "5.0.1"
   },
   "publishConfig": {
