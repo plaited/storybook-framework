@@ -7,9 +7,10 @@ import type {
   StoryContext as GenericStoryContext,
   StrictArgs,
   ProjectAnnotations,
+  Args,
 } from '@storybook/types'
-import type { PlaitedRender } from './types.js'
-import { PlaitedComponentConstructor } from '@plaited/component'
+import type { PlaitedRender, ExtractTemplateParameter } from './types.js'
+import { PlaitedComponentConstructor, FunctionTemplate } from 'plaited'
 
 export type { Args, ArgTypes, Parameters, StrictArgs } from '@storybook/types'
 export type { PlaitedRender }
@@ -19,9 +20,9 @@ export type { PlaitedRender }
  *
  * @see [Default export](https://storybook.js.org/docs/formats/component-story-format/#default-export)
  */
-export type Meta<T extends PlaitedComponentConstructor = PlaitedComponentConstructor> = ComponentAnnotations<
+export type Meta<T extends PlaitedComponentConstructor | FunctionTemplate = FunctionTemplate> = ComponentAnnotations<
   PlaitedRender,
-  Parameters<T['template']>[0]
+  ExtractTemplateParameter<T> & Args
 >
 
 /**
@@ -29,9 +30,9 @@ export type Meta<T extends PlaitedComponentConstructor = PlaitedComponentConstru
  *
  * @see [Named Story exports](https://storybook.js.org/docs/formats/component-story-format/#named-story-exports)
  */
-export type StoryFn<T extends PlaitedComponentConstructor = PlaitedComponentConstructor> = AnnotatedStoryFn<
+export type StoryFn<T extends PlaitedComponentConstructor | FunctionTemplate = FunctionTemplate> = AnnotatedStoryFn<
   PlaitedRender,
-  Parameters<T['template']>[0]
+  ExtractTemplateParameter<T> & Args
 >
 
 /**
@@ -39,9 +40,9 @@ export type StoryFn<T extends PlaitedComponentConstructor = PlaitedComponentCons
  *
  * @see [Named Story exports](https://storybook.js.org/docs/formats/component-story-format/#named-story-exports)
  */
-export type StoryObj<T extends PlaitedComponentConstructor = PlaitedComponentConstructor> = StoryAnnotations<
+export type StoryObj<T extends PlaitedComponentConstructor | FunctionTemplate = FunctionTemplate> = StoryAnnotations<
   PlaitedRender,
-  Parameters<T['template']>[0]
+  ExtractTemplateParameter<T> & Args
 >
 
 export type Decorator<TArgs = StrictArgs> = DecoratorFunction<PlaitedRender, TArgs>

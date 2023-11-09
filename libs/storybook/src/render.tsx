@@ -1,5 +1,5 @@
 import { FunctionTemplate } from '@plaited/jsx'
-import { PlaitedComponentConstructor, createTemplateElement } from '@plaited/component'
+import { PlaitedComponentConstructor } from '@plaited/component'
 import { dedent } from 'ts-dedent'
 import { createFragment } from './create-fragment.js'
 import type { RenderContext, ArgsStoryFn, PartialStoryFn, Args } from '@storybook/types'

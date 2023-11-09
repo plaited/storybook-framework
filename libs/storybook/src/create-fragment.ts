@@ -1,5 +1,4 @@
-import { Template } from '@plaited/jsx'
-import { createTemplateElement } from '@plaited/component'
+import { Template, createTemplateElement } from 'plaited'
 
 export const createFragment = (template: Template) => {
   const { content, stylesheets } = template

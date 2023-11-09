@@ -1,6 +1,5 @@
 import type { WebRenderer } from '@storybook/types'
-import type { PlaitedComponentConstructor } from '@plaited/component'
-import type { FunctionTemplate } from '@plaited/jsx'
+import type { FunctionTemplate, PlaitedComponentConstructor } from 'plaited'
 
 export type { RenderContext } from '@storybook/types'
 
@@ -15,3 +14,9 @@ export interface PlaitedRender extends WebRenderer {
   component: FunctionTemplate | PlaitedComponentConstructor
   storyResult: StoryFnPlaitedReturnType
 }
+
+export type ExtractTemplateParameter<T> = T extends PlaitedComponentConstructor
+  ? Parameters<T['template']>[0]
+  : T extends FunctionTemplate
+  ? Parameters<T>[0]
+  : never
