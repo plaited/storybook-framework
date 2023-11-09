@@ -47,16 +47,16 @@
   },
   "types": "dist/index.d.ts",
   "dependencies": {
-    "@storybook/core-client": "7.5.2",
+    "@storybook/core-client": "7.5.3",
     "@storybook/global": "5.0.0",
-    "@storybook/preview-api": "7.5.2",
-    "@storybook/types": "7.5.2",
-    "ts-dedent": "2.0.0"
+    "@storybook/preview-api": "7.5.3",
+    "@storybook/types": "7.5.3",
+    "ts-dedent": "2.2.0"
   },
   "peerDependencies": {
-    "plaited": "5.0.2"
+    "plaited": "5.0.3"
   },
   "devDependencies": {
-    "plaited": "5.0.2"
+    "plaited": "5.0.4"
   }
 }

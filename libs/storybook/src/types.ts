@@ -1,5 +1,6 @@
 import type { WebRenderer } from '@storybook/types'
 import type { PlaitedComponentConstructor } from '@plaited/component'
+import type { FunctionTemplate } from '@plaited/jsx'
 
 export type { RenderContext } from '@storybook/types'
 
@@ -11,6 +12,6 @@ export interface ShowErrorArgs {
 }
 
 export interface PlaitedRender extends WebRenderer {
-  component: PlaitedComponentConstructor
+  component: FunctionTemplate | PlaitedComponentConstructor
   storyResult: StoryFnPlaitedReturnType
 }
