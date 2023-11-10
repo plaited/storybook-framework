@@ -1,3 +1,3 @@
 # @plaited/storybook-framework
 
-Storybook for Plaited components
+Storybook framework for Plaited Components
