@@ -15,4 +15,4 @@ jobs:
       - name: Test
         uses: devcontainers/ci@v0.3
         with:
-          runCmd: bun run test
+          runCmd: zsh setup.sh
