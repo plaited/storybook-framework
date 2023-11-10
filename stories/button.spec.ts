@@ -8,7 +8,7 @@ test('should render: primary', async ({ page }) => {
   expect(element).toBeTruthy()
   const text = await element.innerText()
   console.log(text)
-  expect(text).toBe('Primary Buton')
+  expect(text).toBe('Primary Button')
 })
 
 test('should render: secondary', async ({ page }) => {
