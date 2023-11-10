@@ -1,6 +1,6 @@
 [![build/tests](https://github.com/plaited/storybook-framework/actions/workflows/tests.yml/badge.svg)](https://github.com/plaited/storybook-framework/actions/workflows/tests.yml)
 
-# @plaited/storybook-framework
+# Storybook Plaited
 
 This mono repo serves as the workspace for working on our libraries for developing PlaitedComponents and FunctionTempaltes with storybook
 
