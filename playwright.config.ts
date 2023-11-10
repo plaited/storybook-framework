@@ -16,9 +16,6 @@ export default defineConfig({
   // Opt out of parallel tests on CI.
   workers: process.env.CI ? 1 : undefined,
 
-  // Reporter to use
-  reporter: 'html',
-
   use: {
     testIdAttribute: 'data-target',
     // Base URL to use in actions like `await page.goto('/')`.
