@@ -38,13 +38,6 @@
     "build": "tsc --skipLibCheck",
     "build:watch": "bun run build --watch"
   },
-  "bundler": {
-    "entries": [
-      "./src/index.ts",
-      "./src/config.ts"
-    ],
-    "platform": "browser"
-  },
   "types": "dist/index.d.ts",
   "dependencies": {
     "@storybook/core-client": "7.5.3",

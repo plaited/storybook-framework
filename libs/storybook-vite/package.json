@@ -24,7 +24,8 @@
     "./preset": "./dist/preset.js"
   },
   "files": [
-    "./dist/**"
+    "./dist/**",
+    "package.json"
   ],
   "publishConfig": {
     "access": "public"
@@ -32,13 +33,6 @@
   "scripts": {
     "build": "tsc --skipLibCheck",
     "build:watch": "bun run build --watch"
-  },
-  "bundler": {
-    "entries": [
-      "./src/index.ts",
-      "./src/preset.ts"
-    ],
-    "platform": "node"
   },
   "types": "dist/index.d.ts",
   "dependencies": {
