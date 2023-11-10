@@ -6,7 +6,7 @@
     "declaration": true,
     "moduleResolution": "nodenext",
     "jsx": "react-jsx",
-    "jsxImportSource": "@plaited/jsx",
+    "jsxImportSource": "plaited",
     "lib": ["dom", "es2022"],
   }
 }
