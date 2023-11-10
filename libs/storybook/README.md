@@ -1,3 +1,3 @@
-# @plaited/storybook-renderer
+# @plaited/storybook
 
-Storybook web-components renderer
+Storybook for PlaitedComponents and FunctionTemplates

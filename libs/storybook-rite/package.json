@@ -1,0 +1,41 @@
+{
+  "name": "@plaited/storybook-rite",
+  "version": "0.0.0",
+  "description": "Instrumented version of @plaited/rite for Storybook Interactions",
+  "license": "ISC",
+  "engines": {
+    "node": ">= v18.15.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/plaited/storybook-framework.git"
+  },
+  "bugs": {
+    "url": "https://github.com/plaited/storybook-framework/issues"
+  },
+  "homepage": "https://github.com/plaited/storybook-framework/tree/main/libs/storybook-rite#readme",
+  "keywords": [
+    "storybook"
+  ],
+  "type": "module",
+  "main": "./dist/index.js",
+  "exports": {
+    ".": "./dist/index.js"
+  },
+  "files": [
+    "./dist/**",
+    "package.json"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "tsc --skipLibCheck",
+    "build:watch": "bun run build --watch"
+  },
+  "types": "dist/index.d.ts",
+  "dependencies": {
+    "@storybook/instrumenter": "7.5.3",
+    "@plaited/rite": "5.0.4"
+  }
+}
