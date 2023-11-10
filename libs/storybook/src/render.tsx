@@ -3,7 +3,7 @@ import type { RenderContext, ArgsStoryFn, PartialStoryFn, Args } from '@storyboo
 
 import type { StoryFnPlaitedReturnType, PlaitedRender } from './types.js'
 
-export const fragment = (template: Template) => {
+export const createFragment = (template: Template) => {
   const { content, stylesheets } = template
   const style = stylesheets.size ? `<style>${[...stylesheets].join('')}</style>` : ''
   return createTemplateElement(content + style).content
@@ -28,7 +28,7 @@ export const render: ArgsStoryFn<PlaitedRender> = (args, context) => {
       attrs[arg] = args[arg]
     }
   }
-  const frag = fragment(Component(attrs))
+  const frag = createFragment(Component(attrs))
   for (const event in events) {
     frag.firstElementChild[event.toLowerCase()] = events[event]
   }
