@@ -35,7 +35,6 @@
   },
   "types": "dist/index.d.ts",
   "dependencies": {
-    "@storybook/instrumenter": "7.5.3",
-    "@plaited/rite": "5.0.4"
+    "@storybook/instrumenter": "7.5.3"
   }
 }

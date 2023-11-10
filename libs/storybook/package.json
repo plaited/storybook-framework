@@ -43,9 +43,12 @@
     "@storybook/core-client": "7.5.3",
     "@storybook/global": "5.0.0",
     "@storybook/preview-api": "7.5.3",
-    "@storybook/types": "7.5.3",
-    "plaited": "^5.0.5",
-    "@playwright/test": "1.39.0",
-    "playwright": "1.39.0"
+    "@storybook/types": "7.5.3"
+  },
+  "peerDependencies": {
+    "plaited": ">=5.0.5"
+  },
+  "devDependencies": {
+    "plaited": "5.0.5"
   }
 }

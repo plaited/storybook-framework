@@ -1,13 +1,9 @@
-import { FunctionTemplate, PlaitedComponentConstructor, createTemplateElement, Template } from 'plaited'
+import type { FunctionTemplate, PlaitedComponentConstructor } from 'plaited'
 import type { RenderContext, ArgsStoryFn, PartialStoryFn, Args } from '@storybook/types'
 
 import type { StoryFnPlaitedReturnType, PlaitedRender } from './types.js'
 
-export const createFragment = (template: Template) => {
-  const { content, stylesheets } = template
-  const style = stylesheets.size ? `<style>${[...stylesheets].join('')}</style>` : ''
-  return createTemplateElement(content + style).content
-}
+import { createFragment } from './utils.js'
 
 const isPlaitedComponent = (
   component: PlaitedComponentConstructor | FunctionTemplate,
