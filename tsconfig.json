@@ -6,10 +6,8 @@
     "declaration": true,
     "moduleResolution": "nodenext",
     "jsx": "react-jsx",
-    "jsxImportSource": "@plaited/jsx",
+    "jsxImportSource": "plaited",
     "lib": ["dom", "es2022"],
-    "outDir": "dist",
-    "rootDir": "src",
   },
-  "exclude": ["**/dist", "**/tests/"]
+  "include": ["stories/**/*", "playwright,config.ts", ".storybook/*"],
 }

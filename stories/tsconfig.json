@@ -8,6 +8,5 @@
     "jsx": "react-jsx",
     "jsxImportSource": "plaited",
     "lib": ["dom", "es2022"],
-  },
-  "exclude": ["**/dist", "**/tests/"]
+  }
 }

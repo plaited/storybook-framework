@@ -1,4 +1,4 @@
-import { createFragment, StoryObj, Meta } from '@plaited/storybook'
+import { fragment, StoryObj, Meta } from '@plaited/storybook'
 import { withActions } from '@storybook/addon-actions/decorator'
 import { Header } from './header.js'
 
@@ -27,7 +27,7 @@ type Story = StoryObj<typeof Header>
 
 export const LoggedIn: Story = {
   render({ user }: { user: { name: string } }) {
-    const frag = createFragment(<Header.template user={user?.name} />)
+    const frag = fragment(<Header.template user={user?.name} />)
     return frag
   },
   args: {

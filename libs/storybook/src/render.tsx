@@ -1,8 +1,13 @@
-import { FunctionTemplate, PlaitedComponentConstructor } from 'plaited'
-import { createFragment } from './create-fragment.js'
+import { FunctionTemplate, PlaitedComponentConstructor, createTemplateElement, Template } from 'plaited'
 import type { RenderContext, ArgsStoryFn, PartialStoryFn, Args } from '@storybook/types'
 
 import type { StoryFnPlaitedReturnType, PlaitedRender } from './types.js'
+
+export const fragment = (template: Template) => {
+  const { content, stylesheets } = template
+  const style = stylesheets.size ? `<style>${[...stylesheets].join('')}</style>` : ''
+  return createTemplateElement(content + style).content
+}
 
 const isPlaitedComponent = (
   component: PlaitedComponentConstructor | FunctionTemplate,
@@ -10,7 +15,6 @@ const isPlaitedComponent = (
 
 export const render: ArgsStoryFn<PlaitedRender> = (args, context) => {
   const { id, component } = context
-  console.log(component)
   if (!component) {
     throw new Error(`Unable to render story ${id} as the component annotation is missing from the default export`)
   }
@@ -24,7 +28,7 @@ export const render: ArgsStoryFn<PlaitedRender> = (args, context) => {
       attrs[arg] = args[arg]
     }
   }
-  const frag = createFragment(Component(attrs))
+  const frag = fragment(Component(attrs))
   for (const event in events) {
     frag.firstElementChild[event.toLowerCase()] = events[event]
   }

@@ -1,5 +1,5 @@
 import { Component, PlaitProps, css, useStore } from 'plaited'
-import { Header } from './header/header.js'
+import { Header } from './header.js'
 
 const [cls, stylesheet] = css`
   .storybook-page {
@@ -80,18 +80,13 @@ export class Page extends Component({
       <Header.tag
         dataTarget='header'
         dataTrigger={{
-          click: 'onLogin',
+          onLogin: 'onLogin',
           onLogout: 'onLogout',
           onCreateAccount: 'onCreateAccount',
         }}
       />
 
-      <section
-        dataTrigger={{
-          click: 'onLogin',
-        }}
-        className={cls['storybook-page']}
-      >
+      <section className={cls['storybook-page']}>
         <h2>Pages in Storybook</h2>
         <p>
           We recommend building UIs with a{' '}
@@ -162,16 +157,21 @@ export class Page extends Component({
   ),
 }) {
   plait({ $, feedback }: PlaitProps): void | Promise<void> {
-    // const header = $('header')
-    // const [ user, setUser ] = useStore<{ name: string}>()
-    // user.subscribe((user) => {header.attr('user', user?.name)})
+    const header = $('header')
+    const [user, setUser] = useStore<{ name: string }>()
+    user.subscribe((user) => {
+      header.attr('user', user?.name)
+    })
     feedback({
       onLogin() {
-        console.log('login')
-        // setUser({ name: 'Jane Doe' })
+        setUser({ name: 'Jane Doe' })
       },
-      // onLogout() {setUser(undefined)},
-      // onCreateAccount() {setUser({ name: 'Jane Doe' })},
+      onLogout() {
+        setUser({ name: null })
+      },
+      onCreateAccount() {
+        setUser({ name: 'Jane Doe' })
+      },
     })
   }
 }

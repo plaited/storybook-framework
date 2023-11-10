@@ -1,5 +1,5 @@
 import { Component, PlaitProps, css } from 'plaited'
-import { Button } from './button/button.js'
+import { Button } from './button.js'
 
 const [cls, stylesheet] = css`
   .storybook-header {
@@ -38,6 +38,7 @@ const [cls, stylesheet] = css`
 
 export class Header extends Component({
   tag: 'header-el',
+  // dev: true,
   observedTriggers: { user: 'user' },
   template: (
     <header {...stylesheet}>
@@ -71,7 +72,7 @@ export class Header extends Component({
         </div>
         <div
           dataTarget='button-bar'
-          dataTrigger={{ click: 'onClick' }}
+          dataTrigger={{ click: 'click' }}
         >
           <Button
             size='small'
@@ -125,7 +126,7 @@ export class Header extends Component({
   }
   plait({ feedback, host }: PlaitProps): void | Promise<void> {
     feedback({
-      onClick(e: Event) {
+      click(e: Event) {
         const value = (e.target as HTMLButtonElement)?.value
         host.dispatchEvent(new CustomEvent(value, { bubbles: true }))
       },

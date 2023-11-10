@@ -39,8 +39,9 @@ export const Button: FT<{
   backgroundColor?: string
   primary?: boolean
   value?: string
-}> = ({ label, size = 'medium', backgroundColor, primary = false, value }) => (
+}> = ({ label, size = 'medium', backgroundColor, primary = false, value, ...rest }) => (
   <button
+    {...rest}
     type='button'
     className={classNames(
       cls['storybook-button'],

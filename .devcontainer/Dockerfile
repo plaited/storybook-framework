@@ -1,5 +1,5 @@
-FROM oven/bun:latest
+FROM  mcr.microsoft.com/playwright:v1.39.0-jammy
 
-RUN bunx playwright install
+RUN npm install -g bun
 
 RUN git config --global --add safe.directory /workspaces/plaited

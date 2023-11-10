@@ -1,4 +1,3 @@
-import { within, userEvent } from '@storybook/testing-library'
 import { StoryObj, Meta } from '@plaited/storybook'
 
 import { Page } from './page.js'
@@ -17,14 +16,5 @@ export default meta
 type Story = StoryObj<typeof Page>
 
 // More on interaction testing: https://storybook.js.org/docs/preact/writing-tests/interaction-testing
-export const LoggedIn: Story = {
-  play: async ({ canvasElement }) => {
-    const canvas = within(canvasElement)
-    const loginButton = await canvas.getByRole('button', {
-      name: /Log in/i,
-    })
-    await userEvent.click(loginButton)
-  },
-}
 
 export const LoggedOut: Story = {}

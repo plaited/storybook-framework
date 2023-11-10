@@ -1,11 +1,13 @@
 {
+  "name": "storybook-framework",
   "license": "ISC",
   "engines": {
     "node": ">= v18.15.0"
   },
   "type": "module",
+  "module": "index.ts",
   "workspaces": [
-    "packages/*"
+    "libs/*"
   ],
   "scripts": {
     "build": "lerna run build",
@@ -16,7 +18,8 @@
     "prepack": "pinst --disable",
     "prepare": "husky install",
     "prettier": "prettier . --write",
-    "test": "lerna run test"
+    "storybook": "storybook dev -p 6006 --ci",
+    "test": "start-server-and-test 'bun run storybook' http://localhost:6006 'bun playwright test'"
   },
   "lint-staged": {
     "*.(js|cjs|tsx|ts)": [
@@ -49,8 +52,23 @@
     "lerna": "7.4.2",
     "lint-staged": "15.0.2",
     "pinst": "3.0.0",
-    "playwright": "^1.39.0",
+    "plaited": "^5.0.5",
+    "playwright": "1.39.0",
     "prettier": "3.0.3",
-    "typescript": "5.2.2"
+    "@storybook/addon-essentials": "7.5.3",
+    "@storybook/addon-interactions": "7.5.3",
+    "@storybook/addon-links": "7.5.3",
+    "@storybook/blocks": "7.5.3",
+    "@storybook/csf": "0.1.1",
+    "@plaited/storybook": "0.0.0",
+    "@plaited/storybook-vite": "0.0.0",
+    "@storybook/html-vite": "7.5.3",
+    "@storybook/testing-library": "0.2.2",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "start-server-and-test": "2.0.2",
+    "storybook": "7.5.3",
+    "typescript": "5.2.2",
+    "vite": "4.5.0"
   }
 }
