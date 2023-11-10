@@ -2,5 +2,4 @@ import './globals.js'
 
 export * from './public-api.js'
 export * from './public-types.js'
-
-export { createFragment } from './render.js'
+export * from './utils.js'
