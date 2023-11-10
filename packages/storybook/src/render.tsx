@@ -1,6 +1,4 @@
-import { FunctionTemplate } from '@plaited/jsx'
-import { PlaitedComponentConstructor } from '@plaited/component'
-import { dedent } from 'ts-dedent'
+import { FunctionTemplate, PlaitedComponentConstructor } from 'plaited'
 import { createFragment } from './create-fragment.js'
 import type { RenderContext, ArgsStoryFn, PartialStoryFn, Args } from '@storybook/types'
 
@@ -53,10 +51,10 @@ const StoryHarness = ({
   if (!(content instanceof DocumentFragment)) {
     showError({
       title: `Expecting a PlaitedComponent or FunctionalTemplate element from the story: "${name}" of "${title}".`,
-      description: dedent`
-        Did you forget to return the PlaitedComponent or FunctionalTemplate from the story?
-        Use "() => (<MyComp/>)" or "() => { return <MyComp/>; }" when defining the story.
-      `,
+      description: `
+Did you forget to return the PlaitedComponent or FunctionalTemplate from the story?
+Use "() => (<MyComp/>)" or "() => { return <MyComp/>; }" when defining the story.
+`,
     })
     return null
   }

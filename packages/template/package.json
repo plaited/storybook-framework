@@ -1,5 +1,5 @@
 {
-  "name": "example",
+  "name": "@plaited/storybook-template",
   "version": "0.0.0",
   "private": true,
   "type": "module",
@@ -8,7 +8,7 @@
     "storybook": "storybook dev -p 6006 --ci"
   },
   "dependencies": {
-    "plaited": "5.0.4"
+    "plaited": "^5.0.4"
   },
   "devDependencies": {
     "@storybook/addon-essentials": "7.5.3",
@@ -17,6 +17,8 @@
     "@storybook/blocks": "7.5.3",
     "@plaited/storybook": "5.0.1",
     "@plaited/storybook-vite": "5.0.1",
+    "@playwright/test": "1.39.0",
+    "playwright": "1.39.0",
     "@storybook/html-vite": "7.5.3",
     "@storybook/testing-library": "0.2.2",
     "react": "18.2.0",

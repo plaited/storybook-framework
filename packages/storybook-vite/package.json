@@ -1,7 +1,7 @@
 {
-  "name": "@plaited/storybook",
+  "name": "@plaited/storybook-vite",
   "version": "5.0.1",
-  "description": "Storybook plaited components renderer",
+  "description": "Storybook for Plaited and Vite: Develop Web Components in isolation with Hot Reloading.",
   "license": "ISC",
   "engines": {
     "node": ">= v18.15.0"
@@ -13,23 +13,18 @@
   "bugs": {
     "url": "https://github.com/plaited/plaited/issues"
   },
-  "homepage": "https://github.com/plaited/plaited/tree/main/libs/storybook-renderer#readme",
+  "homepage": "https://github.com/plaited/plaited/tree/main/libs/storybook-framework#readme",
   "keywords": [
-    "plaited",
-    "storybook",
-    "web-components"
+    "storybook"
   ],
   "type": "module",
   "main": "./dist/index.js",
   "exports": {
     ".": "./dist/index.js",
-    "./preview": "./dist/config.js",
-    "./package.json": "./package.json"
+    "./preset": "./dist/preset.js"
   },
   "files": [
-    "./dist/**",
-    "./package.json",
-    "./preview.js"
+    "./dist/**"
   ],
   "publishConfig": {
     "access": "public"
@@ -41,17 +36,15 @@
   "bundler": {
     "entries": [
       "./src/index.ts",
-      "./src/config.ts"
+      "./src/preset.ts"
     ],
-    "platform": "browser"
+    "platform": "node"
   },
   "types": "dist/index.d.ts",
   "dependencies": {
-    "@storybook/core-client": "7.5.3",
-    "@storybook/global": "5.0.0",
-    "@storybook/preview-api": "7.5.3",
-    "@storybook/types": "7.5.3",
-    "ts-dedent": "2.2.0",
-    "plaited": "^5.0.4"
+    "@storybook/builder-vite": "7.5.3",
+    "@storybook/core-server": "7.5.3",
+    "@storybook/node-logger": "7.5.3",
+    "@plaited/storybook": "5.0.1"
   }
 }
