@@ -1,3 +1,7 @@
+# Archived moving all future work to [plaited monorepo](https://github.com/plaited/plaited/tree/main/libs-storybook#readme)
+
+
+
 [![build/tests](https://github.com/plaited/storybook-framework/actions/workflows/tests.yml/badge.svg)](https://github.com/plaited/storybook-framework/actions/workflows/tests.yml)
 
 # Storybook Plaited
